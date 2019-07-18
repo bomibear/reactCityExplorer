@@ -8,15 +8,15 @@ class SearchForm extends React.Component {
     super(props);
     this.state = {
       input: "",
-      result: {}
     };
   }
 
   handleClick = e => {
     e.preventDefault();
     superagent.get(`https://city-explorer-backend.herokuapp.com/location?data=${this.state.input}`).then(response => {
-      this.setState({result: response.body});
+      this.props.search(response.body);
     })
+    this.setState({input : ""});
   };
 
   render(){
@@ -25,9 +25,8 @@ class SearchForm extends React.Component {
         <form>
           <input onChange={event => {
             this.setState({input: event.target.value});
-            console.log('new input text is ' + this.state.input);
           }}/>
-          <button onClick={this.handleClick}>Search</button>
+          <button onClick={this.handleClick}>Explore!</button>
         </form>
       </Fragment>
     );

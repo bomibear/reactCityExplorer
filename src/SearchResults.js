@@ -3,7 +3,7 @@
 import React, { Fragment } from "react";
 import Result from "./Result";
 
-const SearchResults = () => {
+const SearchResults = (props) => {
   return (
     <Fragment>
       <Result />
