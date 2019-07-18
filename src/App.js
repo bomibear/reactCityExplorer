@@ -1,28 +1,38 @@
+// Should contain all child components and manage the application state.
+
 import "./styles.css";
 import React, { Component, Fragment } from "react";
 import Header from "./Header";
-import Main from "./Main";
+import Map from "./Map";
 import SearchForm from "./SearchForm";
+import SearchResults from "./SearchResults";
+
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: "",
-      location: {}
+      location: {},
+      weather: [],
+      events: [],
+      restaurants: [],
+      hikingTrails: []
     };
   }
 
-  getWeather = e => {
-    e.preventDefault();
-  };
+  searchResults = data => {
+    this.setState({location: data});
+  }
 
   render() {
     return (
       <Fragment>
         <Header />
-        <SearchForm />
-        <Main locationSearch={this.state.location} />
+        <SearchForm search={this.searchResults}/>
+        <Map locationName = {this.state.location}/>
+        <SearchResults
+          location = {this.state.location}
+        />
       </Fragment>
     );
   }
