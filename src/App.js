@@ -5,7 +5,6 @@ import React, { Component, Fragment } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import SearchForm from "./SearchForm";
-import superagent from "superagent";
 
 class App extends Component {
   constructor(props) {
@@ -15,6 +14,7 @@ class App extends Component {
       location: {}
     };
   }
+
 
   render() {
     return (

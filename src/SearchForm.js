@@ -6,23 +6,27 @@ import superagent from "superagent";
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      input: "",
+      result: {}
+    };
   }
-
-  // https://city-explorer-backend.herokuapp.com
-  // https://citylookup4.herokuapp.com/location
 
   handleClick = e => {
     e.preventDefault();
-    superagent.get(`https://city-explorer-backend.herokuapp.com/location?data=${this.location}`).then(response => {
-      console.log(response.body);
-      this.setState({location : response.body});
+    superagent.get(`https://city-explorer-backend.herokuapp.com/location?data=${this.state.input}`).then(response => {
+      this.setState({result: response.body});
     })
   };
+
   render(){
     return (
       <Fragment>
         <form>
-          <input />
+          <input onChange={event => {
+            this.setState({input: event.target.value});
+            console.log('new input text is ' + this.state.input);
+          }}/>
           <button onClick={this.handleClick}>Search</button>
         </form>
       </Fragment>
