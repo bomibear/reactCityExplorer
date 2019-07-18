@@ -5,7 +5,7 @@ const SearchForm = () => {
     <Fragment>
       <form>
         <input />
-        <button>Search</button>
+        <button onClick>Search</button>
       </form>
     </Fragment>
   );
