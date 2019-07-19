@@ -1,12 +1,11 @@
 // Should contain all child components and manage the application state.
 
-import "./styles.css";
 import React, { Component, Fragment } from "react";
-import './style.scss';
-import Header from "./Header";
-import Map from "./Map";
-import SearchForm from "./SearchForm";
-import SearchResults from "./SearchResults";
+import Header from "./components/Header";
+import Map from "./components/Map";
+import SearchForm from "./components/SearchForm";
+import SearchResults from "./components/SearchResults";
+import './scss/core.scss';
 
 
 class App extends Component {

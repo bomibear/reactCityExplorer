@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import Map from "./Map";
-import SearchResults from "./SearchResults";
+import Map from "./components/Map";
+import SearchResults from "./components/SearchResults";
 
 const Main = () => {
   return (
