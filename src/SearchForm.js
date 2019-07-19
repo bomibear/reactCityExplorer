@@ -23,6 +23,7 @@ class SearchForm extends React.Component {
     return (
       <Fragment>
         <form>
+          <label>Search for a location</label>
           <input onChange={event => {
             this.setState({input: event.target.value});
           }}/>

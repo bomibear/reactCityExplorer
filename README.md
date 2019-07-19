@@ -9,6 +9,16 @@ Thanks to [nhuuu](https://github.com/nhuuu) for helping me understand how data i
 
 #### Timeline
 
+**Number and name of feature: SCSS**
+
+Estimate of time needed to complete: 60
+
+Start time: **10:30**
+
+Finish time: **1:00**
+
+Actual time needed to complete: **3.5 hrs**
+
 **Number and name of feature: Add state to App and capture Map data**
 
 Estimate of time needed to complete: 60
