@@ -2,6 +2,7 @@
 
 import "./styles.css";
 import React, { Component, Fragment } from "react";
+import './style.scss';
 import Header from "./Header";
 import Map from "./Map";
 import SearchForm from "./SearchForm";
